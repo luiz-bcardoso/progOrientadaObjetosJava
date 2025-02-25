@@ -1,5 +1,6 @@
 package aula02;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -27,8 +28,22 @@ public class Main {
 			System.out.println("v["+j+"] = "+vetor[j]);
 		}
 		
+		System.out.println();
+		
+		int[][] matrix = new int[3][3];
+		
+		for(int j=0; j < matrix.length; j++) {
+			for(int k=0; k< matrix.length; k++) {
+				matrix[j][k] = ran.nextInt(100);
+				System.out.println("m["+j+"]["+k+"] = "+matrix[j][k]);
+			}
+		}
+		
+		ex06();
 		
 	}
+	
+	// For examples
 	
 	public static void ex01() {
 		for(int i = 0; i<10; i++) {
@@ -66,4 +81,29 @@ public class Main {
 		}
 	}
 	
+	// Arrays examples
+	
+	public static void ex06() {
+		Scanner teclado = new Scanner(System.in);
+		
+		ArrayList<String> listaNomes = new ArrayList<String>();
+		int tamanho = 5;
+		
+		for(int i = 1; i <= tamanho; i++) {
+			System.out.print("Digite um nome ("+i+"/"+tamanho+"): ");
+			listaNomes.add(teclado.next().toUpperCase());
+		}
+		
+		for(String nome : listaNomes) {
+			System.out.println(nome);
+		}
+		
+		teclado.close();
+	}
+	
+	
+	public static void ex07() {
+		
+		
+	}
 }
